@@ -7,6 +7,7 @@ import TableHeader from "@/components/table/tableHeader";
 import TableRow from "@/components/table/tableRow";
 import TableFooter from "@/components/table/tableFooter";
 import Spinner from "@/components/ui/spinner";
+import TableFilter from "@/components/table/tableFilter";
 
 type Props = {
     rows: Row[],
@@ -23,6 +24,10 @@ const Table = ({rows, isLoading}: Props) => {
         setPageSize,
         sort,
         toggleSort,
+        search,
+        setSearch,
+        status,
+        setStatus
     } = useTable(rows);
 
     const columns: Column[] = [
@@ -50,6 +55,7 @@ const Table = ({rows, isLoading}: Props) => {
 
     return (
         <div className="bg-white">
+            <TableFilter search={search} setSearch={setSearch} status={status} setStatus={setStatus}/>
             <table className="min-w-full border-0">
                 <TableHeader columns={columns} sort={sort} toggleSort={toggleSort}/>
                 <tbody>

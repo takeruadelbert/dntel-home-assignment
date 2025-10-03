@@ -40,7 +40,7 @@ const TableFooter = ({pageIndex, pageCount, setPageIndex, pageSize, setPageSize}
                     className="p-1 border rounded-md disabled:opacity-50 disabled:cursor-not-allowed"
                     aria-label="First page"
                 >
-                    <ChevronsLeft height={18} width={18}/>
+                    <ChevronsLeft height={18} width={18} className={"text-pagination"}/>
                 </button>
 
                 <button
