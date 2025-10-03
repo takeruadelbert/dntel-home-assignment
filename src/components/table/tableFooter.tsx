@@ -1,5 +1,6 @@
 import React from "react";
 import {ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight} from "lucide-react";
+import {rowsPerPageOptions} from "@/misc/contants";
 
 type Props = {
     pageIndex: number;
@@ -8,8 +9,6 @@ type Props = {
     pageSize: number;
     setPageSize: (n: number) => void;
 };
-
-const rowsPerPageOptions = [10, 25, 50];
 
 const TableFooter = ({pageIndex, pageCount, setPageIndex, pageSize, setPageSize}: Props) => {
     return (
@@ -23,8 +22,8 @@ const TableFooter = ({pageIndex, pageCount, setPageIndex, pageSize, setPageSize}
                     }}
                     className="border rounded-lg px-2 py-1 h-[34px] bg-white focus:ring-indigo-500 focus:border-indigo-500"
                 >
-                    {rowsPerPageOptions.map((n) => (
-                        <option key={n}>{n}</option>
+                    {rowsPerPageOptions.map((numberRows) => (
+                        <option key={numberRows}>{numberRows}</option>
                     ))}
                 </select>
                 <span>Rows per page</span>

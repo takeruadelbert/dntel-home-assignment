@@ -21,10 +21,6 @@ const config: Config = {
                 sm: ['14px', {lineHeight: '20px', letterSpacing: '0em'}],
                 base: ['17px', {lineHeight: '24px', letterSpacing: '0.02em'}],
             },
-            spacing: {
-                4.5: '18px',
-                5.5: '22px',
-            },
         },
     },
     plugins: [],
